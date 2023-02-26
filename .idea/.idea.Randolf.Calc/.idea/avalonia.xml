@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Randolf.Calc/Randolf.Calc/App.axaml" value="Randolf.Calc/Randolf.Calc/Randolf.Calc.csproj" />
+        <entry key="Randolf.Calc/Randolf.Calc/Views/MainWindow.axaml" value="Randolf.Calc/Randolf.Calc/Randolf.Calc.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -8,30 +8,30 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
-        <None Remove=".gitignore"/>
+        <AvaloniaResource Include="Assets\**" />
+        <None Remove=".gitignore" />
     </ItemGroup>
 
     <ItemGroup>
-        <TrimmerRootDescriptor Include="Roots.xml"/>
+        <TrimmerRootDescriptor Include="Roots.xml" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.0-preview4"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview4"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview4"/>
+        <PackageReference Include="Avalonia" Version="11.0.0-preview4" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview4" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview4" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview4"/>
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.0-preview4"/>
-        <PackageReference Include="Material.Icons.Avalonia" Version="1.2.2"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview4" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.0-preview4" />
+        <PackageReference Include="Material.Icons.Avalonia" Version="1.2.2" />
         <PackageReference Include="Splat.DependencyInjection.SourceGenerator" Version="1.1.93">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1"/>
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Randolf.Calc.Library\Randolf.Calc.Library.csproj"/>
+        <ProjectReference Include="..\Randolf.Calc.Library\Randolf.Calc.Library.csproj" />
     </ItemGroup>
 </Project>

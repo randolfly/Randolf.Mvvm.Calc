@@ -1,17 +1,20 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="800"
-        x:Class="Randolf.Calc.Views.MainWindow"
-        xmlns:viewModels="clr-namespace:Randolf.Calc.Library.ViewModels;assembly=Randolf.Calc.Library"
-        xmlns:system="clr-namespace:System;assembly=System.Runtime"
-        xmlns:m="clr-namespace:Randolf.Calc.Library.Models;assembly=Randolf.Calc.Library"
-        xmlns:material="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
-        WindowStartupLocation="CenterScreen"
-        ExtendClientAreaToDecorationsHint="False"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="Randolf.Calc">
+<Window
+  x:Class="Randolf.Calc.Views.MainWindow"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:m="clr-namespace:Randolf.Calc.Library.Models;assembly=Randolf.Calc.Library"
+  xmlns:material="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:system="clr-namespace:System;assembly=System.Runtime"
+  xmlns:viewModels="clr-namespace:Randolf.Calc.Library.ViewModels;assembly=Randolf.Calc.Library"
+  Title="Randolf.Calc"
+  d:DesignHeight="800"
+  d:DesignWidth="600"
+  ExtendClientAreaToDecorationsHint="False"
+  Icon="/Assets/avalonia-logo.ico"
+  WindowStartupLocation="CenterScreen"
+  mc:Ignorable="d">
   <Design.DataContext>
     <viewModels:MainWindowViewModel />
   </Design.DataContext>
@@ -19,10 +22,10 @@
   <Window.Styles>
     <Style Selector="Button">
       <Setter Property="Margin" Value="5" />
-      <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
-      <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
-      <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-      <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+      <Setter Property="HorizontalAlignment" Value="Stretch" />
+      <Setter Property="VerticalAlignment" Value="Stretch" />
+      <Setter Property="HorizontalContentAlignment" Value="Center" />
+      <Setter Property="VerticalContentAlignment" Value="Center" />
     </Style>
     <Style Selector="Button TextBlock">
       <Setter Property="FontSize" Value="20" />
@@ -31,7 +34,7 @@
       <Setter Property="Background" Value="#2f2a2c" />
       <Setter Property="Margin" Value="5" />
       <Setter Property="FontSize" Value="30" />
-      <Setter Property="MinHeight" Value="35" />
+      <Setter Property="MinHeight" Value="40" />
       <Setter Property="TextAlignment" Value="Right" />
     </Style>
   </Window.Styles>
@@ -206,105 +209,105 @@
   <Grid Margin="5" RowDefinitions="Auto, Auto, *">
     <!--  Screens  -->
     <TextBlock
-      Classes="screen"
       Grid.Row="0"
+      Classes="screen"
       Text="{Binding ShownString}" />
     <TextBlock
-      Classes="screen"
       Grid.Row="1"
+      Classes="screen"
       Text="{Binding ShownResult}" />
     <!--  Keys  -->
     <Grid
-      ShowGridLines="True"
-      ColumnDefinitions="*,*,*,*,*"
       Grid.Row="2"
-      RowDefinitions="*,*,*,*">
+      ColumnDefinitions="*,*,*,*,*"
+      RowDefinitions="*,*,*,*"
+      ShowGridLines="True">
       <!--  Numeric keys  -->
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="3"
         Grid.Column="0"
-        Grid.Row="3">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>0</system:Int32>
         </Button.CommandParameter>
         0
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="2"
         Grid.Column="0"
-        Grid.Row="2">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>1</system:Int32>
         </Button.CommandParameter>
         1
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="2"
         Grid.Column="1"
-        Grid.Row="2">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>2</system:Int32>
         </Button.CommandParameter>
         2
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="2"
         Grid.Column="2"
-        Grid.Row="2">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>3</system:Int32>
         </Button.CommandParameter>
         3
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="1"
         Grid.Column="0"
-        Grid.Row="1">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>4</system:Int32>
         </Button.CommandParameter>
         4
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="1"
         Grid.Column="1"
-        Grid.Row="1">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>5</system:Int32>
         </Button.CommandParameter>
         5
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="1"
         Grid.Column="2"
-        Grid.Row="1">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>6</system:Int32>
         </Button.CommandParameter>
         6
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="0"
         Grid.Column="0"
-        Grid.Row="0">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>7</system:Int32>
         </Button.CommandParameter>
         7
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="0"
         Grid.Column="1"
-        Grid.Row="0">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>8</system:Int32>
         </Button.CommandParameter>
         8
       </Button>
       <Button
-        Command="{Binding AddNumberCommand}"
+        Grid.Row="0"
         Grid.Column="2"
-        Grid.Row="0">
+        Command="{Binding AddNumberCommand}">
         <Button.CommandParameter>
           <system:Int32>9</system:Int32>
         </Button.CommandParameter>
@@ -312,75 +315,75 @@
       </Button>
       <!--  Non-numeric keys  -->
       <Button
-        Command="{Binding AddDecimalSeparatorCommand}"
+        Grid.Row="3"
         Grid.Column="1"
-        Grid.Row="3">
+        Command="{Binding AddDecimalSeparatorCommand}">
         .
       </Button>
       <Button
-        Command="{Binding AlternateNegativePositiveCommand}"
+        Grid.Row="3"
         Grid.Column="2"
-        Grid.Row="3">
+        Command="{Binding AlternateNegativePositiveCommand}">
         +/-
       </Button>
       <Button
-        Command="{Binding DeleteLastCommand}"
+        Grid.Row="0"
         Grid.Column="3"
-        Grid.Row="0">
+        Command="{Binding DeleteLastCommand}">
         <material:MaterialIcon Kind="Backspace" />
       </Button>
       <Button
-        Command="{Binding ClearScreenCommand}"
+        Grid.Row="0"
         Grid.Column="4"
-        Grid.Row="0">
+        Command="{Binding ClearScreenCommand}">
         <material:MaterialIcon Kind="DeleteForever" />
       </Button>
       <Button
-        Command="{Binding AddOperatorCommand}"
+        Grid.Row="1"
         Grid.Column="3"
-        Grid.Row="1">
+        Command="{Binding AddOperatorCommand}">
         <Button.CommandParameter>
           <m:Operator>Multiply</m:Operator>
         </Button.CommandParameter>
         <material:MaterialIcon Kind="Multiply" />
       </Button>
       <Button
-        Command="{Binding AddOperatorCommand}"
+        Grid.Row="1"
         Grid.Column="4"
-        Grid.Row="1">
+        Command="{Binding AddOperatorCommand}">
         <Button.CommandParameter>
           <m:Operator>Divide</m:Operator>
         </Button.CommandParameter>
         <material:MaterialIcon Kind="Division" />
       </Button>
       <Button
-        Command="{Binding AddOperatorCommand}"
+        Grid.Row="2"
         Grid.Column="3"
-        Grid.Row="2">
+        Command="{Binding AddOperatorCommand}">
         <Button.CommandParameter>
           <m:Operator>Add</m:Operator>
         </Button.CommandParameter>
         <material:MaterialIcon Kind="Add" />
       </Button>
       <Button
-        Command="{Binding AddOperatorCommand}"
+        Grid.Row="2"
         Grid.Column="4"
-        Grid.Row="2">
+        Command="{Binding AddOperatorCommand}">
         <Button.CommandParameter>
           <m:Operator>Subtract</m:Operator>
         </Button.CommandParameter>
         <material:MaterialIcon Kind="Minus" />
       </Button>
       <Button
-        Command="{Binding AddParenthesisCommand}"
+        Grid.Row="3"
         Grid.Column="3"
-        Grid.Row="3">
+        Command="{Binding AddParenthesisCommand}">
         <material:MaterialIcon Kind="CodeParentheses" />
       </Button>
       <Button
-        Command="{Binding PickResultCommand}"
+        Grid.Row="3"
         Grid.Column="4"
-        Grid.Row="3">
+        Command="{Binding PickResultCommand}">
         <material:MaterialIcon Kind="Equal" />
       </Button>
     </Grid>
